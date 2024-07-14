@@ -8,7 +8,7 @@ jobs:
      #Install dependencies and run tests
     docker:
       - image: cimg/python:3.8-node
-    working_directory: ~/New folder/eCommerceWebsite
+    working_directory: ~/eCommerceWebsite
     steps:
       - checkout:
           path: ~/eCommerceWebsite
@@ -17,7 +17,7 @@ jobs:
      
       - run:
           name: Run tests
-          command: python eCommerceWebsite/manage.py test eCommerceWebsite
+          command: python manage.py test eCommerceWebsite
   deploy:
     # This is an example deploy job, not actually used by the workflow
     docker:
