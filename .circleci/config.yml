@@ -2,14 +2,14 @@
 # Stacks detected: deps:python:eCommerceWebsite,file:manage.py:eCommerceWebsite
 version: 2.1
 orbs:
-  python: circleci/python@2.1.1
+  python: circleci\python@2.1.1
 jobs:
   test-python:
   #build_and_test:   #Install dependencies and run tests
     #docker:
     #  - image: cimg/python:3.9-node 
       #- image: cimg/base:2021.04
-    working_directory: ~/eCommerceWebsite
+    working_directory: ~\eCommerceWebsite
     executor: python/default
     steps:
       - checkout
@@ -31,10 +31,10 @@ jobs:
 #      - run:
 #          name: deploy
 #          command: '#e.g. ./deploy.sh'
-workflows:
-  build-and-test:
-    jobs:
-    - test-python
+#workflows:
+ # build-and-test:
+  #  jobs:
+   # - test-python
    # - build_and_test
     # - deploy:
     #     requires:
