@@ -22,8 +22,8 @@ jobs:
           command: python manage.py test eCommerceWebsite
 deploy:
     # This is an example deploy job, not actually used by the workflow
-    #docker:
-    #  - image: cimg/base:stable
+    docker:
+      - image: cimg/base:stable
     steps:
       # Replace this with steps to deploy to users
       - run:
