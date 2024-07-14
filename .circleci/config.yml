@@ -4,12 +4,12 @@ version: 2.1
 orbs:
   python: circleci/python@2
 jobs:
-  #test-python:
+  test-python:
      #Install dependencies and run tests
-  #  docker:
-  #    - image: cimg/python:3.9 
+    docker:
+      - image: cimg/python:3.9 
       #- image: cimg/base:stable
-  working_directory: ~/eCommerceWebsite
+    working_directory: ~/eCommerceWebsite
     steps:
       - checkout:
           path: ~/eCommerceWebsite
