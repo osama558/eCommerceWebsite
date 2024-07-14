@@ -11,7 +11,7 @@ jobs:
     working_directory: ~/eCommerceWebsite
     steps:
       - checkout:
-          path: ~/eCommerceWebsite
+          path: ~/
       - python/install-packages:
           pkg-manager: pip 
      
