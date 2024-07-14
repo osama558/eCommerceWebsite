@@ -8,7 +8,7 @@ jobs:
      #Install dependencies and run tests
     docker:
       - image: cimg/python:3.8-node
-    working_directory: ~/project/eCommerceWebsite
+    working_directory: ~/New folder/eCommerceWebsite
     steps:
       - checkout:
           path: ~/eCommerceWebsite
