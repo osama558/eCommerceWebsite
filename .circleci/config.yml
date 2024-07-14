@@ -4,8 +4,8 @@ version: 2.1
 orbs:
   python: circleci/python@2.1.1
 jobs:
-  #test-python:
-  build_and_test:   #Install dependencies and run tests
+  test-python:
+  #build_and_test:   #Install dependencies and run tests
     #docker:
     #  - image: cimg/python:3.9-node 
       #- image: cimg/base:2021.04
@@ -34,8 +34,8 @@ jobs:
 workflows:
   build-and-test:
     jobs:
-    #  - test-python
-    - build_and_test
+    - test-python
+   # - build_and_test
     # - deploy:
     #     requires:
     #       - test-python
