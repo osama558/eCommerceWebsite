@@ -9,7 +9,7 @@ jobs:
     #docker:
     #  - image: cimg/python:3.9-node 
       #- image: cimg/base:2021.04
-    working_directory: ~/eCommerceWebsite/
+    working_directory: ~/eCommerceWebsite
     executor: python/default
     steps:
       - checkout
@@ -18,7 +18,7 @@ jobs:
       #    pkg-manager: pip
       - run:
           name: install dependencies
-          command: pip install -U -r requirements.txt
+          command: pip install -r requirements.txt
       - run:
           name: Run tests
           command: python manage.py test eCommerceWebsite
