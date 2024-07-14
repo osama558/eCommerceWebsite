@@ -13,7 +13,7 @@ jobs:
       - checkout:
           path: ~/eCommerceWebsite
       - python/install-packages:
-          pkg-manager: pip install -r requirements.txt
+          pkg-manager: auto
      
       - run:
           name: Run tests
