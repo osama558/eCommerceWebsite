@@ -7,7 +7,7 @@ jobs:
   test-python:
      #Install dependencies and run tests
     docker:
-      - image: cimg/python:3.9
+      - image: cimg/python:3.9 
       #- image: cimg/base:stable
     working_directory: ~/eCommerceWebsite
     steps:
