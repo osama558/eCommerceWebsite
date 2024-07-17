@@ -76,13 +76,14 @@ jobs:
           #  python -m pip install --upgrade pip
       - python/install-packages:
           pkg-manager: pip
-      #- run:
-      #    name: Run tests
-      #    command: python manage.py test 
       - persist_to_workspace:
           root: ~/project
           paths:
             - .
+      - run:
+          name: Run tests
+          command: python manage.py test 
+      
 
 
 
