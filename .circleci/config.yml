@@ -1,10 +1,11 @@
 # This config was automatically generated from your source code
 # Stacks detected: deps:python:.,file:manage.py:eCommerceWebsite
 version: 2.1
-#orbs:
-  #python: circleci/python@2
+orbs:
+  python: circleci/python@2.1.1
 jobs:
   test-python:
+    executor: python/default
     working_directory: ~/eCommerceWebsite/eCommerceWebsite
     # Install dependencies and run tests
     docker:
