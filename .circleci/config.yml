@@ -85,10 +85,10 @@ jobs:
           command: ls ~/project/eCommerceWebsite
       - run:
           name: Run 2
-          command: pwd         
+          command: cd ~/project/eCommerceWebsite         
       - run:
           name: Run tests
-          command: cd ~/project/eCommerceWebsite
+        
           command: python manage.py test 
       
 
