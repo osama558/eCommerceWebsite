@@ -5,25 +5,25 @@ orbs:
   python: circleci/python@2
 jobs:
   test-python:
-    working_directory: ~/eCommerceWebsite
+    working_directory: ~/eCommerceWebsite/eCommerceWebsite
     # Install dependencies and run tests
-    #docker:
-    #  - image: cimg/python:3.8-node
+    docker:
+      - image: cimg/python:3-9
     steps:
       - checkout
       - python/install-packages
       - run:
           name: Run tests
           command: python manage.py test eCommerceWebsite
-  #deploy:
+  deploy:
     # This is an example deploy job, not actually used by the workflow
-    #docker:
-    #  - image: cimg/base:stable
-    #steps:
+    docker:
+      - image: cimg/base:stable
+    steps:
       # Replace this with steps to deploy to users
-    #  - run:
-    #      name: deploy
-    #      command: '#e.g. ./deploy.sh'
+      - run:
+          name: deploy
+          command: '#e.g. ./deploy.sh'
 workflows:
   build-and-test:
     jobs:
