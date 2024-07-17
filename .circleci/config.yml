@@ -9,7 +9,7 @@ jobs:
       - image: circleci/python:3.9
   #test-python:
   #  executor: python/default
-    #working_directory: ~/eCommerceWebsite/eCommerceWebsite
+    working_directory: eCommerceWebsite/eCommerceWebsite
     # Install dependencies and run tests
   #  docker:
   #    - image: cimg/base:stable
@@ -18,9 +18,9 @@ jobs:
       #- python/install-packages:
       #    pkg-manager: pip
       #- run:
-      - persist_to_workspace:
-          root: eCommerceWebsite/eCommerceWebsite
-          paths: eCommerceWebsite/eCommerceWebsite
+      #- persist_to_workspace:
+      #    root: eCommerceWebsite/eCommerceWebsite
+      #    paths: eCommerceWebsite/eCommerceWebsite
       - run:
           name: Install dependencies
           command: pip install -r requirements.txt
