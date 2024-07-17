@@ -5,6 +5,7 @@ orbs:
   python: circleci/python@2
 jobs:
   test-python:
+  working_directory: ~/eCommerceWebsite
     # Install dependencies and run tests
     docker:
       - image: cimg/python:3.8-node
