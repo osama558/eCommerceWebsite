@@ -54,7 +54,7 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 orbs:
-  python: circleci/python@2.0.3
+  python: circleci/python@2.1.1
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
@@ -67,7 +67,7 @@ jobs:
           pkg-manager: pip
       - run:
           name: Run tests
-          command: python -m tests
+          command: python manage.py test eCommerceWebsite
       - persist_to_workspace:
           root: ~/project
           paths:
