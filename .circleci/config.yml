@@ -60,7 +60,11 @@ orbs:
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   build_and_test: # this can be any name you choose
-    executor: python/default # use the default executor defined within the orb
+    #executor: python/default # use the default executor defined within the orb
+    executor:
+      name: python/default
+  # use Python 3.9
+      tag: '3.9'
     steps:
       - checkout # checkout source code
       - python/install-packages:
