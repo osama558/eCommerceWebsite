@@ -9,19 +9,27 @@ jobs:
       - image: circleci/python:3.9
   #test-python:
   #  executor: python/default
-    working_directory: ~/eCommerceWebsite/eCommerceWebsite
+    #working_directory: ~/eCommerceWebsite/eCommerceWebsite
     # Install dependencies and run tests
   #  docker:
   #    - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: Install dependencies
-          command: pip install -r requirements.txt
+      - python/install-packages:
+          pkg-manager: pip
+      #- run:
+      #- run:
+      #    name: Install dependencies
+      #    command: pip install -r requirements.txt
       #- python/install-packages
       - run:
+      
           name: Run tests
           command: python manage.py test eCommerceWebsite
+      
+      - persist_to_workspace:
+          root: ~/project
+          paths:    
   #deploy:
     # This is an example deploy job, not actually used by the workflow
   #  docker:
