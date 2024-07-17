@@ -69,6 +69,9 @@ jobs:
     steps:
 
       - checkout # checkout source code
+      - restore_cache:
+          keys:
+            - pip-cache-{{ checksum "requirements.txt" }}
       - run:
           name: Setup Python environment
           command: |
@@ -80,6 +83,10 @@ jobs:
           root: ~/project
           paths:
             - .
+      - save_cache:
+          key: pip-cache-{{ checksum "requirements.txt" }}
+          paths:
+            - /home/circleci/.cache/pip      
       - run:
           name: Run 
           command: ls ~/project/eCommerceWebsite
@@ -92,7 +99,7 @@ jobs:
              cd ~/project/eCommerceWebsite
              python manage.py test 
       
-
+      
 
 
 #jobs2:
