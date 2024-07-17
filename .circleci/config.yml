@@ -7,8 +7,8 @@ jobs:
   test-python:
     working_directory: ~/eCommerceWebsite
     # Install dependencies and run tests
-    docker:
-      - image: cimg/python:3.8-node
+    #docker:
+    #  - image: cimg/python:3.8-node
     steps:
       - checkout
       - python/install-packages
