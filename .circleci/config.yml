@@ -28,9 +28,8 @@ jobs:
           command: python manage.py test eCommerceWebsite
       
       - persist_to_workspace:
-          root: ~/project
-          paths:
-            - .
+          root: ~/
+          paths: eCommerceWebsite/eCommerceWebsite
   #deploy:
     # This is an example deploy job, not actually used by the workflow
   #  docker:
