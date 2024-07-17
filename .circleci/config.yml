@@ -6,7 +6,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/python:3.8 
+      - image: circleci/python:3.9
   #test-python:
   #  executor: python/default
     working_directory: ~/eCommerceWebsite/eCommerceWebsite
