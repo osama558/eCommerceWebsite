@@ -19,17 +19,17 @@ jobs:
       #    pkg-manager: pip
       #- run:
       - run:
-          name: Install dependencies
-          command: pip install -r requirements.txt
+        name: Install dependencies
+        command: pip install -r requirements.txt
       #- python/install-packages
       - run:
       
-          name: Run tests
-          command: python manage.py test eCommerceWebsite
+        name: Run tests
+        command: python manage.py test eCommerceWebsite
       
       - persist_to_workspace:
-          root: ~/project
-          paths:    
+        root: ~/project
+        paths:    
   #deploy:
     # This is an example deploy job, not actually used by the workflow
   #  docker:
