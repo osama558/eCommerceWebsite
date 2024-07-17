@@ -81,6 +81,9 @@ jobs:
           paths:
             - .
       - run:
+          name: Run 
+          command: ls project     
+      - run:
           name: Run tests
           command: python manage.py test 
       
