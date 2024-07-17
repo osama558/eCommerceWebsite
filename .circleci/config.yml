@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/eCommerceWebsite/eCommerceWebsite
     # Install dependencies and run tests
     docker:
-      - image: cimg/python:3.9-node
+      - image: cimg/base:stable
     steps:
       - checkout
       - python/install-packages
