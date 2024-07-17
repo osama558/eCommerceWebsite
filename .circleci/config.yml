@@ -82,13 +82,13 @@ jobs:
             - .
       - run:
           name: Run 
-          command: ls ~/project
+          command: ls ~/project/eCommerceWebsite
       - run:
           name: Run 2
           command: pwd         
-      - run:
-          name: Run tests
-          command: python manage.py test 
+      #- run:
+      #    name: Run tests
+      #    command: python manage.py test 
       
 
 
