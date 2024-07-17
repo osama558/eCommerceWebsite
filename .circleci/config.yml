@@ -2,7 +2,8 @@
 # Stacks detected: deps:python:.,file:manage.py:eCommerceWebsite
 version: 2.1
 orbs:
-  python: /eCommerceWebsite/.virtualenvs/Scripts/python
+  python: /eCommerceWebsite/.virtualenvs/Scripts/python.exe
+  tag: '3.9'
 jobs:
   test-python:
     working_directory: ~/eCommerceWebsite/eCommerceWebsite
