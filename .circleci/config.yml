@@ -19,7 +19,7 @@ jobs:
       #    pkg-manager: pip
       #- run:
       - persist_to_workspace:
-          root: ~/project
+          root: eCommerceWebsite/eCommerceWebsite
           paths: eCommerceWebsite/eCommerceWebsite
       - run:
           name: Install dependencies
