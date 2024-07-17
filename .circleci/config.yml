@@ -15,12 +15,12 @@ jobs:
   #    - image: cimg/base:stable
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
+      #- python/install-packages:
+      #    pkg-manager: pip
       #- run:
-      #- run:
-      #    name: Install dependencies
-      #    command: pip install -r requirements.txt
+      - run:
+          name: Install dependencies
+          command: pip install -r requirements.txt
       #- python/install-packages
       - run:
       
