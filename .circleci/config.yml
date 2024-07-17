@@ -2,10 +2,11 @@
 # Stacks detected: deps:python:.,file:manage.py:eCommerceWebsite
 version: 2.1
 orbs:
-  python: circleci/python@2
+  python: /eCommerceWebsite/.virtualenvs/Scripts/python
 jobs:
   test-python:
     working_directory: ~/eCommerceWebsite/eCommerceWebsite
+
     # Install dependencies and run tests
     docker:
       - image: cimg/python:3.9-node
