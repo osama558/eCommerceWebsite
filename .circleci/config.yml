@@ -9,7 +9,7 @@ jobs:
       - image: circleci/python:3.9
   #test-python:
   #  executor: python/default
-    working_directory: eCommerceWebsite/eCommerceWebsite
+    working_directory: /eCommerceWebsite/eCommerceWebsite
     # Install dependencies and run tests
   #  docker:
   #    - image: cimg/base:stable
