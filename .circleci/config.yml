@@ -29,7 +29,8 @@ jobs:
       
       - persist_to_workspace:
           root: ~/project
-          paths:    
+          paths:
+            - .
   #deploy:
     # This is an example deploy job, not actually used by the workflow
   #  docker:
